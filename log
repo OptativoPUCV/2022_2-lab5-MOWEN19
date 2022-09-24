@@ -16,3 +16,9 @@ treemap.c:40:12: error: unused variable ‘spect’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 7436c3d
+Sat 24 Sep 2022 02:55:03 AM UTC: 
+ treemap.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+ tests:  4|7
+total_score: 5/70
+cf6a7da
