@@ -50,7 +50,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   if (tree->root == NULL){
     tree->root = new;
     tree->current = tree->root;
-    return NULL;
+    return ;
   }
  
   TreeNode *auxRecorrido = tree->root;
@@ -60,7 +60,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       if(auxRecorrido->right == NULL){
         auxRecorrido = new;
         tree->current = auxRecorrido;
-        return NULL;
+        return ;
       }
       auxRecorrido = auxRecorrido->right;
     }
@@ -68,14 +68,14 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       if(auxRecorrido->left == NULL){
         auxRecorrido = new;
         tree->current = auxRecorrido;
-        return NULL;
+        return ;
       }
       auxRecorrido = auxRecorrido->left;
     }
     if(is_equal(tree,key,auxRecorrido->pair->key)){
       return NULL;
     }
-    if(new->left == NULL && new->right == NULL){return NULL;}
+    if(new->left == NULL && new->right == NULL){return ;}
   }
 }
 
