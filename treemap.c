@@ -73,7 +73,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       auxRecorrido = auxRecorrido->left;
     }
     if(is_equal(tree,key,auxRecorrido->pair->key)){
-      return NULL;
+      return ;
     }
     if(new->left == NULL && new->right == NULL){return ;}
   }
