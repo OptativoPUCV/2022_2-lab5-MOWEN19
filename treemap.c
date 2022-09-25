@@ -90,9 +90,6 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     }
     if(new->left == NULL && new->right == NULL){return NULL;}
   }
-
-  
-    return NULL;
 }
 
 
