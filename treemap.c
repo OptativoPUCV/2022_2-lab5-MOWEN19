@@ -102,7 +102,6 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 
 Pair * searchTreeMap(TreeMap * tree, void* key) 
-puts("der\n");
   if (tree->root == NULL){return NULL;}
   TreeNode *new = tree->root;
 
