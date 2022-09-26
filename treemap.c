@@ -70,6 +70,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         //TreeNode *new = createTreeNode(key,value);
         auxRecorrido->right = new;
         tree->current = new;
+        new->parent = auxRecorrido;
         return ;
       }
       auxRecorrido = auxRecorrido->right;
@@ -81,6 +82,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         //TreeNode *new = createTreeNode(key,value);
         auxRecorrido->left = new;
         tree->current = new;
+        new->parent = auxRecorrido;
+
         return ;
       }
       auxRecorrido = auxRecorrido->left;
