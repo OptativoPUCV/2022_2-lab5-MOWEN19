@@ -49,7 +49,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   
   // si es vacio el arbol
   TreeNode *new = createTreeNode(key,value);
-  printf("%d",new->pair->key);
+  printf("%p",new->pair->key);
   //printf("%d",new->pair->value);
   //if (tree->root == NULL){
   //  tree->root = new;
