@@ -1006,3 +1006,16 @@ Mon 26 Sep 2022 10:52:26 PM UTC:
  tests:  15|4
 total_score: 25/70
 216b859
+Mon 26 Sep 2022 10:55:38 PM UTC: 
+ treemap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:105:8: error: too few arguments to function ‘is_equal’
+  105 |     if(is_equal(tree->root->pair->key,node->pair->key)){
+      |        ^~~~~~~~
+treemap.c:22:5: note: declared here
+   22 | int is_equal(TreeMap* tree, void* key1, void* key2){
+      |     ^~~~~~~~
+Compilation failed
+d7df590
