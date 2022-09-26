@@ -115,11 +115,11 @@ void removeNode(TreeMap * tree, TreeNode* node) {
           // susdhuasid a
           return;
         }
-        else if(auxRecorrido->left != NULL){
+        else if(auxRecorrido->left != NULL && auxRecorrido->right == NULL){
           auxRecorrido->left->parent = auxRecorrido->parent;
           return;
         }
-        else if(auxRecorrido->right != NULL){
+        else if(auxRecorrido->right != NULL && auxRecorrido->left == NULL){
           auxRecorrido->right->parent = auxRecorrido->parent;
           puts("r\n");
           return;
