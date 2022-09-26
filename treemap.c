@@ -90,7 +90,13 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
 }
 
 TreeNode * minimum(TreeNode * x){
-
+  TreeNode *auxRecorrido = x;
+  while (auxRecorrido != NULL){
+    if (auxRecorrido->left == NULL){
+      return auxRecorrido;
+    }
+    auxRecorrido = auxRecorrido->left;
+  }
     return NULL;
 }
 
