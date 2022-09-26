@@ -106,12 +106,19 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       tree->root = NULL;
       return;
     }
+    if(is_equal(tree,tree->root->left->pair->key,node->pair->key)){
+      
+    }
+    if(is_equal(tree,tree->root->right->pair->key,node->pair->key)){
+      
+    }
+    auxRecorrido->left->parent = auxRecorrido->parent;    
     // der
     if(tree->lower_than(auxRecorrido->pair->key,node->pair->key)){
       if(is_equal(tree,node->pair->key,auxRecorrido->right->pair->key)){
         auxRecorrido = auxRecorrido->right;
         if(auxRecorrido->left == NULL && auxRecorrido->right == NULL){
-          auxRecorrido->parent = auxRecorrido->parent->parent;
+          auxRecorrido->parent->right = NULL;
           return;
         }
       }
@@ -121,8 +128,16 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     }
     // izq
     if(tree->lower_than(node->pair->key,auxRecorrido->pair->key)){
-      auxRecorrido = auxRecorrido->left;
-      return;
+      if(is_equal(tree,node->pair->key,auxRecorrido->left->pair->key)){
+        auxRecorrido = auxRecorrido->left;
+        if(auxRecorrido->left == NULL && auxRecorrido->right == NULL){
+          auxRecorrido->parent->left = NULL;
+          return;
+        }
+      }
+      else{
+        auxRecorrido = auxRecorrido->left;
+      }
     }
     puts("n\n");
   }
