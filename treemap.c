@@ -64,7 +64,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     if(is_equal(tree,key,auxRecorrido->pair->key)){
       return ;
     }
-    
+    // der
     if(tree->lower_than(auxRecorrido->pair->key,key)){
       if(auxRecorrido->right == NULL){
         auxRecorrido->right = new;
@@ -74,7 +74,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       }
       auxRecorrido = auxRecorrido->right;
     }
-    
+    // izq
     if(tree->lower_than(key,auxRecorrido->pair->key)){
       if(auxRecorrido->left == NULL){
         auxRecorrido->left = new;
@@ -84,8 +84,6 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       }
       auxRecorrido = auxRecorrido->left;
     }
-    
-    
   }
 }
 
@@ -102,7 +100,28 @@ TreeNode * minimum(TreeNode * x){
 
 
 void removeNode(TreeMap * tree, TreeNode* node) {
-
+  TreeNode *auxRecorrido = tree->root;
+  while (auxRecorrido != NULL){
+    
+    // der
+    if(tree->lower_than(auxRecorrido->pair->key,node->pair->key)){
+      if(is_equal(tree,node->pair->key,auxRecorrido->right->pair->key)){
+        auxRecorrido = auxRecorrido->right;
+        if(auxRecorrido->left == NULL && auxRecorrido->right == NULL){
+          auxRecorrido->parent = auxRecorrido->parent->parent;
+        }
+      }
+      else{
+        auxRecorrido = auxRecorrido->right;
+      }
+    }
+    // izq
+    if(tree->lower_than(key,auxRecorrido->pair->key)){
+      auxRecorrido = auxRecorrido->left;
+    }
+    
+  }
+  return ;
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){

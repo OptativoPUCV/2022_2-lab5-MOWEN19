@@ -970,3 +970,15 @@ Mon 26 Sep 2022 09:42:19 PM UTC:
  tests:  15|4
 total_score: 25/70
 5ddf561
+Mon 26 Sep 2022 10:48:24 PM UTC: 
+ treemap.c | 25 +++++++++++++++++++++++--
+ 1 file changed, 23 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:119:25: error: ‘key’ undeclared (first use in this function); did you mean ‘key_t’?
+  119 |     if(tree->lower_than(key,auxRecorrido->pair->key)){
+      |                         ^~~
+      |                         key_t
+treemap.c:119:25: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+f56be8b
