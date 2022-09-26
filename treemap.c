@@ -120,9 +120,9 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     // izq
     if(tree->lower_than(node->pair->key,auxRecorrido->pair->key)){
       auxRecorrido = auxRecorrido->left;
+      return;
     }
     puts("n\n");
-    break;
   }
   return ;
 }
