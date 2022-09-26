@@ -61,7 +61,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   // ciclo para recorrer el arbol
   while (auxRecorrido != NULL){
     if(tree->lower_than(auxRecorrido->pair->key,key)){
-      puts("der\n");
+      //puts("der\n");
       if(auxRecorrido->right == NULL){
         //TreeNode *new = createTreeNode(key,value);
         auxRecorrido->right = new;
@@ -71,7 +71,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       auxRecorrido = auxRecorrido->right;
     }
     if(tree->lower_than(key,auxRecorrido->pair->key)){
-      puts("izq\n");
+      //puts("izq\n");
       if(auxRecorrido->left == NULL){
         //TreeNode *new = createTreeNode(key,value);
         auxRecorrido->left = new;
