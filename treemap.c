@@ -49,6 +49,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   
   // si es vacio el arbol
   TreeNode *new = createTreeNode(key,value);
+  printf("%d",new->pair->key);
+  printf("%d",new->pair->value);
   //if (tree->root == NULL){
   //  tree->root = new;
   //  tree->current = tree->root;
@@ -86,8 +88,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     }
     
     if(new->left == NULL && new->right == NULL){
-      puts("lol\n");
-      return ;}
+      return ;
+    }
   }
 }
 
