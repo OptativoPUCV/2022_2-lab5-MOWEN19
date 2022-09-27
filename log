@@ -1104,3 +1104,9 @@ Tue 27 Sep 2022 12:04:00 AM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 1ddcdfd
+Tue 27 Sep 2022 12:05:33 AM UTC: 
+ treemap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  16|4
+total_score: 30/70
+a73467b
