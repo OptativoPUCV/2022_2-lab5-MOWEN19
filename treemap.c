@@ -193,7 +193,23 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-    return NULL;
+  TreeNode *auxRecorrido = tree->root;
+  while (auxRecorrido != NULL){
+    // der
+    if(tree->lower_than(auxRecorrido->pair->key,key)){
+      if (auxRecorrido->){
+        
+      }
+      auxRecorrido = auxRecorrido->right;
+    }
+    // izq
+    if(tree->lower_than(key,auxRecorrido->pair->key)){
+      auxRecorrido = auxRecorrido->left;
+    }
+  }  
+
+  
+  return NULL;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
