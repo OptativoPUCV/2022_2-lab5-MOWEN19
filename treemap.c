@@ -198,7 +198,7 @@ Pair * firstTreeMap(TreeMap * tree) {
      //izq
       if (auxRecorrido->left == NULL && auxRecorrido->right == NULL){
         tree->current = auxRecorrido;
-        return auxRecorrido;
+        return auxRecorrido->pair;
       }
       auxRecorrido = auxRecorrido->left;
     
