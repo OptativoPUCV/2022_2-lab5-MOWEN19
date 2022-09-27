@@ -193,7 +193,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-  TreeNode *auxRecorrido = tree->root;
+  //TreeNode *auxRecorrido = tree->root;
   //while (auxRecorrido != NULL){
     // der
     //if(tree->lower_than(auxRecorrido->pair->key,key)){
