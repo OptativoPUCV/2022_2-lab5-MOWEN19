@@ -156,7 +156,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       }
     }
     puts("n\n");
-    return;
+    //return;
   }
   return ;
 }
