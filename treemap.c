@@ -193,20 +193,16 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-  //TreeNode *auxRecorrido = tree->root;
-  //while (auxRecorrido != NULL){
-    // der
-    //if(tree->lower_than(auxRecorrido->pair->key,key)){
-      //if (auxRecorrido->){
-        
-      //}
-      //auxRecorrido = auxRecorrido->right;
-    //}
-    // izq
-    //if(tree->lower_than(key,auxRecorrido->pair->key)){
-      //auxRecorrido = auxRecorrido->left;
-    //}
-  //}  
+  TreeNode *auxRecorrido = tree->root;
+  while (auxRecorrido != NULL){
+     //izq
+      if (auxRecorrido->left == NULL && auxRecorrido->right == NULL){
+        tree->current = auxRecorrido;
+        return auxRecorrido;
+      }
+      auxRecorrido = auxRecorrido->left;
+    
+  }  
 
   
   return NULL;
