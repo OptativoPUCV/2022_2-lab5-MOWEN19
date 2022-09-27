@@ -137,21 +137,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       if(is_equal(tree,node->pair->key,auxRecorrido->left->pair->key)){
         auxRecorrido = auxRecorrido->left;
         if(auxRecorrido->left == NULL && auxRecorrido->right == NULL){
-          auxRecorrido->parent->right = NULL;
-          return;
-        }
-        else if(auxRecorrido->left != NULL && auxRecorrido->right != NULL){
-          // susdhuasid a
-          return;
-        }
-        else if(auxRecorrido->left != NULL && auxRecorrido->right == NULL){
-          auxRecorrido->left->parent = auxRecorrido->parent;
-          puts("l\n");
-          return;
-        }
-        else if(auxRecorrido->right != NULL && auxRecorrido->left == NULL){
-          auxRecorrido->right->parent = auxRecorrido->parent;
-          puts("r\n");
+          auxRecorrido->parent->left = NULL;
           return;
         }
       }
