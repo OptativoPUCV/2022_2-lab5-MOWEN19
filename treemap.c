@@ -109,21 +109,24 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         auxRecorrido = auxRecorrido->right;
         
         if(auxRecorrido->left != NULL && auxRecorrido->right != NULL){
+          tree->current = auxRecorrido;
           // susdhuasid a
           return;
         }
         else if(auxRecorrido->left == NULL && auxRecorrido->right == NULL){
           auxRecorrido->parent->right = NULL;
+          tree->current = auxRecorrido;
           return;
         }
         else if(auxRecorrido->left != NULL && auxRecorrido->right == NULL){
           auxRecorrido->left->parent = auxRecorrido->parent;
+          tree->current = auxRecorrido;
           puts("n\n");
           return;
         }
         else if(auxRecorrido->right != NULL && auxRecorrido->left == NULL){
           auxRecorrido->right->parent = auxRecorrido->parent;
-          
+          tree->current = auxRecorrido;
           return;
         }
         
@@ -139,18 +142,22 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         auxRecorrido = auxRecorrido->left;
         if(auxRecorrido->left == NULL && auxRecorrido->right == NULL){
           auxRecorrido->parent->left = NULL;
+          tree->current = auxRecorrido;
           return;
         }
         else if(auxRecorrido->left != NULL && auxRecorrido->right != NULL){
           // susdhuasid a
+          tree->current = auxRecorrido;
           return;
         }
         else if(auxRecorrido->left != NULL && auxRecorrido->right == NULL){
           auxRecorrido->left->parent = auxRecorrido->parent;
+          tree->current = auxRecorrido;
           return;
         }
         else if(auxRecorrido->right != NULL && auxRecorrido->left == NULL){
           auxRecorrido->right->parent = auxRecorrido->parent;
+          tree->current = auxRecorrido;
           return;
         }
       }
