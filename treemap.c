@@ -109,6 +109,8 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         auxRecorrido = auxRecorrido->right;
         if(auxRecorrido->left == NULL && auxRecorrido->right == NULL){
           auxRecorrido->parent->right = NULL;
+          puts("n\n");
+
           return;
         }
         else if(auxRecorrido->left != NULL && auxRecorrido->right != NULL){
@@ -117,6 +119,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         }
         else if(auxRecorrido->left != NULL && auxRecorrido->right == NULL){
           auxRecorrido->left->parent = auxRecorrido->parent;
+          
           return;
         }
         else if(auxRecorrido->right != NULL && auxRecorrido->left == NULL){
